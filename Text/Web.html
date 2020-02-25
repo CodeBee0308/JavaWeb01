@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function checkform(form){
+		if(form.username.value==""){
+			alert("Username is null!");
+			return false;
+		}else if(form.password.value==""){
+			alert("Password is null!");
+			form.password.focus();
+			return false;
+		}
+		return true;
+	}
+</script>
+</head>
+<body>
+<form action="" method="post" name="myform" onSubmit="return checkform(this)">
+Name:<input type="text" name="username"><br>
+Password:<input type="password" name="password"><br>
+<input type="submit" value="Submit"><br>
+<input type="reset" value="Reset"><br>
+</form>
+</body>
+</html>
